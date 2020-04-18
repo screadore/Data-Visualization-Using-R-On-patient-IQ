@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## R Vignette
 
 ```{r IQ}
 summary(IQ)
@@ -21,6 +21,34 @@ You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
 plot(IQ)
+
 ```
+```(R DATA).
+data.names.vec <- c(
+  "PIQ",
+  "VIQ",
+  "IQ",
+  "AGE",
+  "X",
+  "id",
+  "sex",
+  "duration",
+  "days",
+  "piq",
+  "viq")
+```
+
+```str(IQ)
+'data.frame':	331 obs. of  8 variables:
+ $ X       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ id      : int  3358 3535 3547 3592 3728 3790 3807 3808 4253 4356 ...
+ $ days    : int  30 16 40 13 19 13 37 31 40 31 ...
+ $ duration: int  4 17 1 10 6 3 5 7 3 7 ...
+ $ sex     : Factor w/ 2 levels "Female","Male": 2 2 2 2 2 2 2 2 2 2 ...
+ $ age     : num  20.7 55.3 55.9 61.7 30.1 ...
+ $ piq     : int  87 95 95 59 67 76 74 91 115 86 ...
+ $ viq     : int  89 77 116 73 73 69 77 110 110 83 ...
+```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
